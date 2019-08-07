@@ -1,4 +1,5 @@
 <%= form_for @post do |f| %>
+
   <%= f.label "Title" %>
   <%= f.text_field :title %>
   <%= f.label "Content" %>
@@ -7,5 +8,7 @@
   <%= f.fields_for :categories, @post.categories.build do |categories_fields| %>
       <%= categories_fields.text_field :name %>
   <% end %>
+  
   <%= f.submit %>
+  
 <% end %>

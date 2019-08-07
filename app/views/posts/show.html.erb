@@ -10,4 +10,8 @@
   <%= comment.content %>
 <% end %>
 
+<ul><% @post.users.uniq.each do |user| %>
+  <%= link_to user.username, user_path(user) %>
+<% end %>
+</ul>
 
